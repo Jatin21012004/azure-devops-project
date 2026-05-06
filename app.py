@@ -7,7 +7,7 @@ logging.basicConfig(level=logging.INFO)
 
 @app.route("/")
 def home():
-    return "Azure DevOps Project Running!"
+    return "Updated DevOps Project Running!"
 
 @app.route("/health")
 def health():
