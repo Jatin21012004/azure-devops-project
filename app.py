@@ -12,7 +12,6 @@ def home():
 @app.route("/health")
 def health():
     return jsonify({"status": "healthy"})
-
 @app.route("/env")
 def env():
     return jsonify({"environment": os.getenv("ENV", "dev")})
