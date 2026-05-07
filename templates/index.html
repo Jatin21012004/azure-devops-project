@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure DevOps Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>☁ Azure DevOps Monitoring Dashboard</h1>
+
+    <div class="grid">
+
+        <div class="card">
+            <h2>System Status</h2>
+            <p><strong>Status:</strong> {{ data.status }}</p>
+            <p><strong>Environment:</strong> {{ data.environment }}</p>
+            <p><strong>Uptime:</strong> {{ data.uptime }} seconds</p>
+        </div>
+
+        <div class="card">
+            <h2>Server Information</h2>
+            <p><strong>Hostname:</strong> {{ data.hostname }}</p>
+            <p><strong>Platform:</strong> {{ data.platform }}</p>
+            <p><strong>Python:</strong> {{ data.python_version }}</p>
+        </div>
+
+        <div class="card">
+            <h2>Deployment</h2>
+            <p><strong>Cloud:</strong> {{ data.deployment }}</p>
+            <p><strong>CI/CD:</strong> {{ data.ci_cd }}</p>
+            <p><strong>Container:</strong> Docker</p>
+        </div>
+
+        <div class="card">
+            <h2>DevOps Stack</h2>
+            <ul>
+                <li>Azure App Service</li>
+                <li>Docker Containers</li>
+                <li>GitHub Actions</li>
+                <li>Application Insights</li>
+                <li>Bicep IaC</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
